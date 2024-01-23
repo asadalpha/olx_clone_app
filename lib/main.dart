@@ -18,16 +18,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'OLx_CLone',
-        theme: new ThemeData(
+        theme: ThemeData(
             useMaterial3: true,
             scaffoldBackgroundColor: const Color(0xFFE1E8F0)),
         initialRoute: '/',
         routes: {
-          '/': (context) => WelcomeScreen(),
+          '/': (context) => const WelcomeScreen(),
           '/signinpage': (context) => const SignInScreen(),
           '/registerpage': (context) => const RegisterScreen(),
-          '/home': (context) => HomePage(),
-          '/chat': (context) => ChatScreen()
+          '/home': (context) => const HomePage(),
+          '/chat': (context) => const ChatScreen()
         });
   }
 }

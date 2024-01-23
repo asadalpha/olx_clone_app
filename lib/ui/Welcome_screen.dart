@@ -34,7 +34,7 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.center,
               child: Text("0lx",
                   style: GoogleFonts.poppins(
-                    fontSize: 90.0 * devicePixelRatio,
+                    fontSize: 50.0 * devicePixelRatio,
                     fontWeight: FontWeight.bold,
                     color: const Color(0xff3B76FE),
                   )),
@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                 width: 200,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.popAndPushNamed(context, "/signinpage");
+                    Navigator.popAndPushNamed(context, "/registerpage");
                   },
                   child: Container(
                     width: size.width * 0.3,

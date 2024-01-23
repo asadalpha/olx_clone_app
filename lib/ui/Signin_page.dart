@@ -27,15 +27,15 @@ class SignInScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 100.0,
+            SizedBox(
+              height: 40.0 * devicePixelRatio,
             ),
             // OLX Logo
             Container(
               alignment: Alignment.center,
               child: Text("0lx",
                   style: GoogleFonts.poppins(
-                    fontSize: 90.0 * devicePixelRatio,
+                    fontSize: 50.0 * devicePixelRatio,
                     fontWeight: FontWeight.bold,
                     color: const Color(0xff3B76FE),
                   )),

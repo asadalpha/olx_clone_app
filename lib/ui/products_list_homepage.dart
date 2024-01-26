@@ -15,12 +15,13 @@ class ProductsList extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromRGBO(241, 245, 248, 1),
-          toolbarHeight: 70.0,
+          toolbarHeight: 80.0,
           centerTitle: true,
           title: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "Your Location",
@@ -105,14 +106,11 @@ class ProductsList extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextFormField(
-                          decoration: const InputDecoration(
-                            icon: Icon(Icons.search),
-                            hintText: '   Search anything..',
-                            border: InputBorder.none,
-                          ),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          icon: Icon(Icons.search),
+                          hintText: '   Search anything..',
+                          border: InputBorder.none,
                         ),
                       ),
                     ),
@@ -140,7 +138,7 @@ class ProductsList extends StatelessWidget {
                     ),
                     QuickItems(
                       iconsdata: Icons.tv,
-                      title: "Electronics\n& Gadgets",
+                      title: "Electronics",
                     ),
                   ],
                 ),
@@ -156,7 +154,7 @@ class ProductsList extends StatelessWidget {
                       crossAxisCount: 2,
                       crossAxisSpacing: 16.0,
                       mainAxisSpacing: 16.0,
-                      childAspectRatio: (1 / 1.5),
+                      childAspectRatio: (1 / 1.75),
                     ),
                     itemCount: products.length,
                     itemBuilder: (BuildContext context, int index) {

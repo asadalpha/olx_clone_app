@@ -25,7 +25,7 @@ class _ChatScreenState extends State<ChatScreen> {
         backgroundColor: const Color.fromRGBO(241, 245, 248, 1),
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 56.0),
+            padding: const EdgeInsets.only(top: 56.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -224,9 +224,6 @@ class _ChatScreenState extends State<ChatScreen> {
                                               )))
                                         ],
                                       ),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
                                     ),
                                   ],
                                 ),

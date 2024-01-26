@@ -19,8 +19,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'OLx_CLone',
         theme: ThemeData(
-            useMaterial3: true,
-            scaffoldBackgroundColor: const Color(0xFFE1E8F0)),
+          useMaterial3: true,
+          scaffoldBackgroundColor: const Color.fromRGBO(241, 245, 248, 1),
+        ),
         initialRoute: '/',
         routes: {
           '/': (context) => const WelcomeScreen(),

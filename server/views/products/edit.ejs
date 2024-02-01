@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <H1>Edit your product</H1>
+
+    <form method="POST" action="/products/<%= product._id %>?_method=PATCH">
+      <input
+        type="text"
+        name="product[title]"
+        placeholder="Enter Title"
+        value="<%=product.title %>"
+      /><br />
+      <input
+        type="text"
+        name="product[images][0]"
+        value="<%=product.images[0] %>"
+        placeholder="Enter image"
+      />
+      <input
+        type="text"
+        name="product[images][1]"
+        placeholder="Enter image"
+        value="<%=product.images[1] %>"
+      /><br />
+      <input
+        type="number"
+        name="product[price]"
+        placeholder="Enter price"
+        value="<%=product.price %>"
+      /><br />
+      <input
+        type="text"
+        name="product[location]"
+        placeholder="Enter location"
+        value="<%=product.location %>"
+      /><br />
+      <select name="product[tag]">
+        <option value="sold">sold</option>
+        <option value="unsold">unsold</option>
+        <option value="not available">not available</option>
+      </select>
+      <button type="submit">Edit</button>
+    </form>
+  </body>
+</html>

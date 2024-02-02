@@ -15,17 +15,11 @@
         placeholder="Enter Title"
         value="<%=product.title %>"
       /><br />
+      <img src="<%=product.images.url %>" alt="img file" />
       <input
         type="text"
-        name="product[images][0]"
-        value="<%=product.images[0] %>"
+        name="product[images]"
         placeholder="Enter image"
-      />
-      <input
-        type="text"
-        name="product[images][1]"
-        placeholder="Enter image"
-        value="<%=product.images[1] %>"
       /><br />
       <input
         type="number"

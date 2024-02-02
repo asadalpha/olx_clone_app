@@ -14,13 +14,17 @@ module.exports.renderNew = (req, res) => {
 };
 
 module.exports.postNew = async (req, res) => {
-  let result = new Product(req.body.product);
+  let url = req.file.path;
+  let filename = req.file.filename;
+  let result = Product(req.body.product);
   result.owner = req.user._id;
+  result.images = { url, filename };
 
   await result
     .save()
     .then(() => {
       console.log("product added to DB");
+      console.log(result);
     })
     .catch((err) => {
       throw err;

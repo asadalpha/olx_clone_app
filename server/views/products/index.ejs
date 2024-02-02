@@ -29,13 +29,8 @@
         <a href="/products/<%= product._id %>">
           <h3><%= product.title %></h3>
           <ul>
-            <li>
-              <ul>
-                Images: <% product.images.map((image)=> {%>
-                <li><%=image %></li>
-                <%}) %>
-              </ul>
-            </li>
+            <li><img src="<%=product.images.url %>" alt="img file" /></li>
+
             <li>Price: <%=product.price %></li>
             <li>Location: <%=product.location %></li>
             <li>Tag: <%=product.tag %></li>

@@ -7,17 +7,16 @@
   </head>
   <body>
     <H1>Add a New Product</H1>
-    <form method="POST" action="/products">
+    <form method="POST" action="/products" enctype="multipart/form-data">
       <input
         type="text"
         name="product[title]"
         placeholder="Enter Title"
       /><br />
-      <input type="text" name="product[images][0]" placeholder="Enter image" />
       <input
-        type="text"
-        name="product[images][1]"
-        placeholder="Enter image"
+        type="file"
+        name="product[images]"
+        placeholder="Enter first image"
       /><br />
       <input
         type="number"

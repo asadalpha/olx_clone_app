@@ -10,11 +10,10 @@ const productSchema = Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  images: [
-    {
-      type: String,
-    },
-  ],
+  images: {
+    url: String,
+    filename: String,
+  },
   price: {
     type: Number,
   },

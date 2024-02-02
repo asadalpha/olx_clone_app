@@ -15,12 +15,20 @@
         placeholder="Enter Title"
         value="<%=product.title %>"
       /><br />
-      <img src="<%=product.images.url %>" alt="img file" />
-      <input
+
+      <br />
+      <img
+        style="height: 100px; padding-top: 6px; padding-left: 4px"
+        src="<%=product.images.url %>"
+      />
+      <!-- <input name="product[images]" type="file" placeholder="Enter new Image" /> -->
+      <br />
+
+      <!-- <input
         type="text"
         name="product[images]"
         placeholder="Enter image"
-      /><br />
+      /><br /> -->
       <input
         type="number"
         name="product[price]"

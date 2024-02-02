@@ -24,7 +24,6 @@ module.exports.postNew = async (req, res) => {
     .save()
     .then(() => {
       console.log("product added to DB");
-      console.log(result);
     })
     .catch((err) => {
       throw err;

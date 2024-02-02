@@ -23,9 +23,10 @@ const initDB = async () => {
   await Product.deleteMany({}); // deleting previous data
 
   // // this code snippet can be used to add more field entries in future:-
-  //   initData.data = initData.data.map((obj) => ({
-  //     ...obj,
-  //   }));
+  initData.data = initData.data.map((obj) => ({
+    ...obj,
+    owner: "65bc869735e03f69b73c9ef0",
+  }));
 
   await Product.insertMany(initData.data);
   console.log("data was initialised");

@@ -6,7 +6,12 @@
     <title>Document</title>
   </head>
   <body>
+    <script>
+      const product = <%-JSON.stringify(product)%> ;
+    </script>
     <H1><%=product.title %></H1>
+    <h3>Owner: <%=product.owner.username %></h3>
+
     <ul>
       <li>
         <ul>

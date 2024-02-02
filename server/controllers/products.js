@@ -15,6 +15,7 @@ module.exports.renderNew = (req, res) => {
 
 module.exports.postNew = async (req, res) => {
   let result = new Product(req.body.product);
+  result.owner = req.user._id;
 
   await result
     .save()
@@ -29,7 +30,7 @@ module.exports.postNew = async (req, res) => {
 
 module.exports.showProduct = async (req, res) => {
   let { id } = req.params;
-  let result = await Product.findById(id);
+  let result = await Product.findById(id).populate("owner");
   res.render("products/show.ejs", { product: result });
 };
 
